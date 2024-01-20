@@ -27,9 +27,7 @@ def get_address(latitude, longitude):
         return None
 
 
-# Desired locations to search for in the address
-desired_locations = ['HaArbaa', 'Hod Hasharon']
-
+i = 0
 # Read coordinates from the file
 with open(file_path, 'r') as file:
     content = file.readlines()
@@ -46,7 +44,9 @@ with open(file_path, 'r') as file:
         address = get_address(lat, lon)
 
         # Check if the address contains any of the desired locations
-        if address and any(location.lower() in address.lower() for location in desired_locations):
+        if address:
             # Print the address with formatting
             print(f"The address of the coordinates {lat}, {lon} is: {Fore.RED}{Style.BRIGHT}{address}{Style.RESET_ALL}")
+            i += 1
+print(f"You have {i} addresses")
 

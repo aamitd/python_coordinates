@@ -10,7 +10,7 @@ load_dotenv()
 user_email = os.getenv("USER_EMAIL")
 
 # Path to the file containing coordinates
-file_path = '/Users/amitdahan/PycharmProjects/Coordinates/coordi'
+file_path = file_path
 
 
 def get_address(latitude, longitude):
